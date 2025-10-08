@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>D101 Music Room - Booking System</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://raw.githubusercontent.com/9Pu-nex/Jomjai/main/JOMJAI.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- DataTables -->
+    <link href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" rel="stylesheet">
+    
+    <!-- W3.CSS for Modal -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="https://tinyurl.com/9pune-booking" class="logo">
+            <img src="https://raw.githubusercontent.com/9Pu-nex/Jomjai/main/JOMJAI.png" width="50" height="50" alt="Logo">
+            D101 Music Room
+        </a>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Change Room</button>
+            <div class="dropdown-content">
+                <a href="https://tinyurl.com/9pune-booking" id="home">Home</a>
+                <a href="#" id="floor1">Floor 1</a>
+                <a href="#" id="floor2">Floor 2</a>
+                <a href="#" id="floor3">Floor 3</a>
+                <a>Other</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container-fluid main-content">
+        <div class="table-container">
+            <table id="example" class="display table-striped table-bordered">
+                <thead class="black-header"></thead>
+            </table>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom modal-custom">
+            <div class="w3-center">
+                <span onclick="closeModal()" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close">&times;</span>
+                <img src="https://raw.githubusercontent.com/9Pu-nex/Jomjai/main/JOMJAI%20PIC/05.D101.jpg" alt="D101" class="room-image">
+                <h1>D101 Music Room</h1>
+                <h4>Please input your [Name + Subject + Grade] for booking</h4>
+            </div>
+
+            <form class="w3-container" id="myForm">
+                <div class="w3-section">
+                    <input type="hidden" id="numid" name="numid">
+                    <input type="hidden" id="room" name="room">
+                    <input type="text" id="date" name="date" style="display:none;">
+                    <input type="text" id="day" name="day" style="display:none;">
+                    <input type="text" id="code" name="code" style="display:none;">
+
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="08:30 - 09:20 AM" id="pr1" name="pr1">
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="09:20 - 10:10 AM" id="pr2" name="pr2">
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="10:25 - 11:15 AM" id="pr3" name="pr3">
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="11:15 - 12:05 PM" id="pr4" name="pr4">
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="12:55 - 01:45 PM" id="pr5" name="pr5">
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="01:50 - 02:40 PM" id="pr6" name="pr6">
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="02:45 - 03:35 PM" id="pr7" name="pr7">
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="After School" id="pr8" name="pr8">
+
+                    <button class="btn btn-primary w3-button w3-block w3-section w3-padding submit-btn" type="submit">Submit</button>
+                    <button onclick="closeModal()" type="button" class="btn btn-danger w3-button w3-block w3-section w3-padding">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" style="display:none;">
+        <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/2.0.4/js/dataTables.js"></script>
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Configuration -->
+    <script src="config.js"></script>
+    
+    <!-- Main Script -->
+    <script src="app.js"></script>
+</body>
+</html>
