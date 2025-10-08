@@ -2,7 +2,7 @@
 // Replace this URL with your Google Apps Script Web App URL
 const CONFIG = {
     // Your Google Apps Script Web App URL (after deploying code.gs)
-    SCRIPT_URL: 'Yhttps://script.google.com/macros/s/AKfycbweN3SZzba0XZlgti1Pv0GimndqeEiD-Rmq20QEPoyjBvXp1_z0Zh2_p_InC7whg_1ZQg/exec',
+    SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbweN3SZzba0XZlgti1Pv0GimndqeEiD-Rmq20QEPoyjBvXp1_z0Zh2_p_InC7whg_1ZQg/exec',
     
     // Room configurations
     ROOMS: {
